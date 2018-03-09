@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Picker } from 'react-native';
 import { TextField } from 'react-native-material-textfield';
 
 export default class App extends React.Component {
@@ -38,6 +38,17 @@ export default class App extends React.Component {
               onChangeText={ (phone) => this.setState({ phone }) }
             />
           </View>
+        </View>
+        <View style={{paddingLeft: 20}}>
+          <Picker
+            selectedValue={this.state.language}
+            style={{marginTop: 80, color: '#b0aeae',}}
+            mode={'dropdown'}
+            onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
+            <Picker.Item label="Current Country" value="java" />
+            <Picker.Item label="JavaScript" value="js" />
+          </Picker>
+          <View style = {{borderWidth: 0.3, borderColor:'#b0aeae', marginRight:20,}} />
         </View>
       </View>
     );
