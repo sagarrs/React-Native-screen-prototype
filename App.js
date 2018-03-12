@@ -29,7 +29,7 @@ export default class App extends React.Component {
           <Text style = {{ flex: 1, marginBottom: 10 }}>
           </Text>
         </Text>
-        <View style = {{ flexDirection: "row", paddingLeft: 50, paddingBottom: 10}}>
+        <View style = {{flexDirection: "row", paddingLeft: 50, paddingBottom: 10}}>
           <View style = {{ flex: 0.2 }}>
             <TextInput style={{height: 40, paddingLeft: 19, fontSize: 26, color: '#dcdcdc'}} onChangeText={(text) => this.setState({text})} value={this.state.text} />
           </View>
@@ -44,6 +44,7 @@ export default class App extends React.Component {
           </View>
         </View>
         <Text style={styles.txt2}>
+            <Text style={{color: '#fe001a'}}>OTP Incorrect</Text>{"\n"}{"\n"}
             <Text>Not Recieved ? </Text>
             <Text style={{color: '#0277bd'}}>Resend OTP</Text>
         </Text>
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif-thin'
   },
   txt2: {
-    marginBottom: 150,
+    marginBottom: 120,
     paddingLeft: 70,
     fontSize: 16,
     fontWeight: "100",
