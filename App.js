@@ -29,19 +29,19 @@ export default class App extends React.Component {
         </Text>
         <View style = {{ flexDirection: "row", paddingLeft: 50, paddingBottom: 10}}>
           <View style = {{ flex: 0.2 }}>
-            <Text>0</Text>
+            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
             <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
           </View>
           <View style = {{ flex: 0.2 }}>
-            <Text>0</Text>
+            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
             <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
           </View>
           <View style = {{ flex: 0.2 }}>
-            <Text>0</Text>
+            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
             <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
           </View>
           <View style = {{ flex: 0.2 }}>
-            <Text>0</Text>
+            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
             <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
           </View>
         </View>
