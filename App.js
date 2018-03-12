@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { TextField } from 'react-native-material-textfield';
 
 const Img1 = './Images/Untitled-10.png'
 
@@ -7,7 +8,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bodyText: 'Account Information'
+      bodyText: 'Account Information',
+      text: '0',
     };
   }
   state = {
@@ -29,20 +31,16 @@ export default class App extends React.Component {
         </Text>
         <View style = {{ flexDirection: "row", paddingLeft: 50, paddingBottom: 10}}>
           <View style = {{ flex: 0.2 }}>
-            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
-            <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
+            <TextInput style={{height: 40, paddingLeft: 19, fontSize: 26, color: '#dcdcdc'}} onChangeText={(text) => this.setState({text})} value={this.state.text} />
           </View>
           <View style = {{ flex: 0.2 }}>
-            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
-            <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
+            <TextInput style={{height: 40, paddingLeft: 19, fontSize: 26, color: '#dcdcdc'}} onChangeText={(text) => this.setState({text})} value={this.state.text} />
           </View>
           <View style = {{ flex: 0.2 }}>
-            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
-            <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
+            <TextInput style={{height: 40, paddingLeft: 19, fontSize: 26, color: '#dcdcdc'}} onChangeText={(text) => this.setState({text})} value={this.state.text} />
           </View>
           <View style = {{ flex: 0.2 }}>
-            <Text style={{ paddingLeft: 17, fontSize: 26, color: '#dcdcdc' }}>0</Text>
-            <View style = {{borderWidth: 1, borderColor:'#b0aeae', marginRight:15,}} />
+            <TextInput style={{height: 40, paddingLeft: 19, fontSize: 26, color: '#dcdcdc'}} onChangeText={(text) => this.setState({text})} value={this.state.text} />
           </View>
         </View>
         <Text style={styles.txt2}>
