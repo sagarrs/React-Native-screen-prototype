@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {AppRegistry,View,Text,StyleSheet,TextInput,Image,TouchableOpacity, Linking} from 'react-native';
+import {AppRegistry, View,Text,StyleSheet,TextInput,Image,TouchableOpacity, Linking} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { TextField } from 'react-native-material-textfield';
 
@@ -24,53 +24,42 @@ export default class Onboarding21 extends Component{
             </Text>
           </Text>
         </View>
-          <TouchableOpacity style={styles.box3}>
-            <View style={styles.prevBtn}>
-              <FontAwesome name='angle-left' style={styles.btnIcon1} />
+            <View style = {{ flex: 1, flexDirection: "row", paddingLeft: 25, paddingRight: 25}}>
+              <View style = {{ flex: 1 }}>
+                <TextField inputContainerPadding={2}
+                  labelTextStyle={{paddingLeft: 21}}
+                  style = {{}}
+                  label='0'
+                />
+              </View>
+              <View style = {{ flex: 0.2 }}>
+              </View>
+              <View style = {{ flex: 1}}>
+                <TextField inputContainerPadding={2}
+                  labelTextStyle={{paddingLeft: 21}}
+                  style = {{ }}
+                  label='0'
+                />
+              </View>
+              <View style = {{ flex: 0.2 }}>
+              </View>
+              <View style = {{ flex: 1 }}>
+                <TextField inputContainerPadding={2}
+                  labelTextStyle={{paddingLeft: 21}}
+                  style = {{ }}
+                  label='0'
+                />
+              </View>
+              <View style = {{ flex: 0.2 }}>
+              </View>
+              <View style = {{ flex: 1}}>
+                <TextField inputContainerPadding={2}
+                  labelTextStyle={{paddingLeft: 21}}
+                  style = {{}}
+                  label='0'
+                />
+              </View>
             </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.box4}>
-            <View style={styles.nextBtn}>
-              <FontAwesome name='angle-right' style={styles.btnIcon2} />
-            </View>
-          </TouchableOpacity>
-          <View style = {{ flex: 1, flexDirection: "row", paddingLeft: 25, paddingRight: 25}}>
-            <View style = {{ flex: 1 }}>
-              <TextField inputContainerPadding={2}
-                labelTextStyle={{paddingLeft: 21}}
-                style = {{}}
-                label='0'
-              />
-            </View>
-            <View style = {{ flex: 0.2 }}>
-            </View>
-            <View style = {{ flex: 1}}>
-              <TextField inputContainerPadding={2}
-                labelTextStyle={{paddingLeft: 21}}
-                style = {{ }}
-                label='0'
-              />
-            </View>
-            <View style = {{ flex: 0.2 }}>
-            </View>
-            <View style = {{ flex: 1 }}>
-              <TextField inputContainerPadding={2}
-                labelTextStyle={{paddingLeft: 21}}
-                style = {{ }}
-                label='0'
-              />
-            </View>
-            <View style = {{ flex: 0.2 }}>
-            </View>
-            <View style = {{ flex: 1}}>
-              <TextField inputContainerPadding={2}
-                labelTextStyle={{paddingLeft: 21}}
-                style = {{}}
-                label='0'
-              />
-            </View>
-          </View>
           <Text style={styles.txt2}>
             <Text>Not Recieved ? </Text>
             <Text style={{color: '#0277bd'}}
@@ -78,7 +67,17 @@ export default class Onboarding21 extends Component{
               Resend OTP
             </Text>
         </Text>
+        <TouchableOpacity style={styles.box3}>
+          <View style={styles.prevBtn}>
+            <FontAwesome name='angle-left' style={styles.btnIcon1} />
+          </View>
+        </TouchableOpacity>
 
+        <TouchableOpacity style={styles.box4}>
+          <View style={styles.nextBtn}>
+            <FontAwesome name='angle-right' style={styles.btnIcon2} />
+          </View>
+        </TouchableOpacity>
       </View>
     );
   }
