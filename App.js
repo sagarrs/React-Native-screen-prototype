@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {AppRegistry, View,Text,StyleSheet,TextInput,Image,TouchableOpacity, Linking} from 'react-native';
+import {AppRegistry, View,Text,StyleSheet,TextInput,Image,TouchableOpacity, Linking, Button} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { TextField } from 'react-native-material-textfield';
 
@@ -16,66 +16,36 @@ export default class Onboarding21 extends Component{
         <Text style={styles.title1}>Verify Phone Number</Text>
         <View style={styles.box1}>
           <Image source={require('./Images/Untitled-10.png')} style={styles.hifi}/>
-          <Text style={styles.txt}>
-            <Text>An OTP has been sent by sms to </Text>
-            <Text style={{fontWeight: "bold"}}>+91 8892275735</Text>
-            <Text> for verification</Text>{"\n"}{"\n"}
-            <Text style = {{ flex: 1, marginBottom: 10 }}>
-            </Text>
-          </Text>
         </View>
-            <View style = {{ flex: 1, flexDirection: "row", paddingLeft: 25, paddingRight: 25}}>
-              <View style = {{ flex: 1 }}>
-                <TextField inputContainerPadding={2}
-                  labelTextStyle={{paddingLeft: 21}}
-                  style = {{}}
-                  label='0'
-                />
-              </View>
-              <View style = {{ flex: 0.2 }}>
-              </View>
-              <View style = {{ flex: 1}}>
-                <TextField inputContainerPadding={2}
-                  labelTextStyle={{paddingLeft: 21}}
-                  style = {{ }}
-                  label='0'
-                />
-              </View>
-              <View style = {{ flex: 0.2 }}>
-              </View>
-              <View style = {{ flex: 1 }}>
-                <TextField inputContainerPadding={2}
-                  labelTextStyle={{paddingLeft: 21}}
-                  style = {{ }}
-                  label='0'
-                />
-              </View>
-              <View style = {{ flex: 0.2 }}>
-              </View>
-              <View style = {{ flex: 1}}>
-                <TextField inputContainerPadding={2}
-                  labelTextStyle={{paddingLeft: 21}}
-                  style = {{}}
-                  label='0'
-                />
-              </View>
-            </View>
-          <Text style={styles.txt2}>
-            <Text>Not Recieved ? </Text>
-            <Text style={{color: '#0277bd'}}
-                  onPress={() => Linking.openURL('http://google.com')}>
-              Resend OTP
-            </Text>
+        <Text style={styles.txt}>
+          <Text>Please enter your mobile number </Text>
         </Text>
+        <View style = {{ flex: 1, flexDirection: "row", paddingTop: 5, paddingLeft: 25, paddingRight: 25}}>
+          <View style = {{ flex: 0.2, marginBottom: 10 }}>
+            <TextField inputContainerPadding={2}
+              style = {{ marginBottom: -12, paddingLeft: 300 }}
+              label='+91'
+              value={phone}
+              onChangeText={ (phone) => this.setState({ phone }) }
+            />
+          </View>
+          <View style = {{ flex: 0.2, marginBottom: 10 }}>
+          </View>
+          <View style = {{ flex: 1, marginBottom: 10 }}>
+            <TextField inputContainerPadding={2}
+              style = {{ marginBottom: -12 }}
+              label='Mobile'
+              value={phone}
+              onChangeText={ (phone) => this.setState({ phone }) }
+            />
+          </View>
+        </View>
+        <View style={{ flex: 1, paddingBottom: 85, paddingLeft: 45, paddingRight: 45}}>
+          <Button title="Verify" color="#ec0d7c" onPress={() => {}}/>
+        </View>
         <TouchableOpacity style={styles.box3}>
           <View style={styles.prevBtn}>
             <FontAwesome name='angle-left' style={styles.btnIcon1} />
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.box4}>
-          <View style={styles.nextBtn}>
-            <FontAwesome name='angle-right' style={styles.btnIcon2} />
           </View>
         </TouchableOpacity>
       </View>
@@ -114,11 +84,6 @@ const styles=StyleSheet.create({
     bottom: 15,
     left:15,
   },
-  box4:{
-    position: 'absolute',
-    bottom: 15,
-    right:15,
-  },
   hifi:{
     width: 150,
     height: 150,
@@ -153,23 +118,9 @@ const styles=StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  nextBtn:{
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: '#ec0d7c',
-    borderColor: '#ec0d7c',
-    borderWidth: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   btnIcon1:{
     fontSize: 32,
     color: '#999',
-  },
-  btnIcon2:{
-    fontSize: 32,
-    color: '#fff',
   },
 
 })
