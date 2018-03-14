@@ -34,6 +34,7 @@ export default class Example extends Component {
             {this.state.bodyText}
           </Text>
         </Text>
+        <View>
           <MaterialTabs
             items={['All', 'Request sent', 'Request recieved']}
             selectedIndex={this.state.selectedTab}
@@ -44,7 +45,7 @@ export default class Example extends Component {
             activeTextColor="black"
             // textStyle={{ fontFamily: 'Papyrus' }}
           />
-
+        </View>
           <View style={{flexDirection: "row"}}>
             <View style={styles.card}>
               <Image style={{flex: 1}} source={{uri: Img1}}/>
@@ -52,9 +53,9 @@ export default class Example extends Component {
               <View style={{backgroundColor: '#0277bd'}}>
                 <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
               </View>
-                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+                <Text style={{color: '#0277bd', margin: 2}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Bangalore, India</Text>
               </View>
             </View>
             <View style={styles.card}>
@@ -63,9 +64,9 @@ export default class Example extends Component {
                 <View style={{backgroundColor: '#0277bd'}}>
                   <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
                 </View>
-                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+                <Text style={{color: '#0277bd', margin: 2}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Bangalore, India</Text>
               </View>
             </View>
           </View>
@@ -76,9 +77,9 @@ export default class Example extends Component {
               <View style={{backgroundColor: '#0277bd'}}>
                 <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
               </View>
-                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+                <Text style={{color: '#0277bd', margin: 2}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Bangalore, India</Text>
               </View>
             </View>
             <View style={styles.card}>
@@ -87,9 +88,9 @@ export default class Example extends Component {
                 <View style={{backgroundColor: '#0277bd'}}>
                   <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
                 </View>
-                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+                <Text style={{color: '#0277bd', margin: 2}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 2}}>Bangalore, India</Text>
               </View>
             </View>
           </View>
@@ -102,20 +103,21 @@ export default class Example extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: '10%',
+    padding: 10,
   },
   baseText: {
     // fontFamily: 'Cochin',
   },
   titleText: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    flex: 1,
+    fontSize: 25,
+    fontWeight: '100',
     color: '#0277bd',
   },
   card: {
     flex: 2,
     width: 150,
-    height: 250,
+    height: 230,
     marginTop:20,
     marginRight:5,
     marginLeft:5,
