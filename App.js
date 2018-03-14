@@ -1,128 +1,125 @@
-import React,{Component} from 'react';
-import {AppRegistry, View,Text,StyleSheet,TextInput,Image,TouchableOpacity, Linking, Button} from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { TextField } from 'react-native-material-textfield';
+import React, { Component } from 'react';
+import { AppRegistry, StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import MaterialTabs from 'react-native-material-tabs';
 
-export default class Onboarding21 extends Component{
+const Img1 = 'https://i.ytimg.com/vi/9D1vO-7tfZg/maxresdefault.jpg'
+const Img2 = 'https://i.ytimg.com/vi/9D1vO-7tfZg/maxresdefault.jpg'
+
+export default class Example extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      titleText: "Your Matches",
+    };
+  }
+
   state = {
-    phone: '',
+    selectedTab: 0,
   };
 
-  render(){
-    let { phone } = this.state;
+  setTab(tab) {
+    this.setState({ selectedTab: tab });
+  }
 
-    return(
+  render() {
+    return (
       <View style={styles.container}>
-        <Text style={styles.title1}>Verify Phone Number</Text>
-        <View style={styles.box1}>
-          <Image source={require('./Images/Untitled-10.png')} style={styles.hifi}/>
-        </View>
-        <Text style={styles.txt}>
-          <Text>Please enter your mobile number </Text>
+        <ScrollView>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={this.onPressTitle}>
+            {this.state.titleText}{'\n'}{'\n'}
+          </Text>
+          <Text numberOfLines={5}>
+            {this.state.bodyText}
+          </Text>
         </Text>
-        <View style = {{ flex: 1, flexDirection: "row", paddingTop: 5, paddingLeft: 25, paddingRight: 25}}>
-          <View style = {{ flex: 0.2,  }}>
-            <TextField inputContainerPadding={2}
-              style = {{ paddingLeft: 300 }}
-              label='+91'
-              value={phone}
-              onChangeText={ (phone) => this.setState({ phone }) }
-            />
+          <MaterialTabs
+            items={['All', 'Request sent', 'Request recieved']}
+            selectedIndex={this.state.selectedTab}
+            onChange={this.setTab.bind(this)}
+            barColor="#ffffff"
+            inactiveTextColor="#000000"
+            indicatorColor="#ec0d7c"
+            activeTextColor="black"
+            // textStyle={{ fontFamily: 'Papyrus' }}
+          />
+
+          <View style={{flexDirection: "row"}}>
+            <View style={styles.card}>
+              <Image style={{flex: 1}} source={{uri: Img1}}/>
+              <View>
+              <View style={{backgroundColor: '#0277bd'}}>
+                <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
+              </View>
+                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+              </View>
+            </View>
+            <View style={styles.card}>
+              <Image style={{flex: 1}} source={{uri: Img2}}/>
+              <View>
+                <View style={{backgroundColor: '#0277bd'}}>
+                  <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
+                </View>
+                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+              </View>
+            </View>
           </View>
-          <View style = {{ flex: 0.2, }}>
+          <View style={{flexDirection: "row"}}>
+            <View style={styles.card}>
+              <Image style={{flex: 1}} source={{uri: Img1}}/>
+              <View>
+              <View style={{backgroundColor: '#0277bd'}}>
+                <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
+              </View>
+                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+              </View>
+            </View>
+            <View style={styles.card}>
+              <Image style={{flex: 1}} source={{uri: Img2}}/>
+              <View>
+                <View style={{backgroundColor: '#0277bd'}}>
+                  <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
+                </View>
+                <Text style={{color: '#0277bd', margin: 4}}>Gauri . 26</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Asst. Editor</Text>
+                <Text style={{color: '#A9A9A9', margin: 4}}>Bangalore, India</Text>
+              </View>
+            </View>
           </View>
-          <View style = {{ flex: 1, }}>
-            <TextField inputContainerPadding={2}
-              style = {{ }}
-              label='Mobile'
-              value={phone}
-              onChangeText={ (phone) => this.setState({ phone }) }
-            />
-          </View>
-        </View>
-        <View style={{ flex: 1, paddingBottom: 85, paddingLeft: 45, paddingRight: 45}}>
-          <Button title="Verify" color="#ec0d7c" onPress={() => {}}/>
-        </View>
-        <TouchableOpacity style={styles.box3}>
-          <View style={styles.prevBtn}>
-            <FontAwesome name='angle-left' style={styles.btnIcon1} />
-          </View>
-        </TouchableOpacity>
-      </View>
+        </ScrollView>
+    </View>
     );
   }
 }
 
-const styles=StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      width:'100%',
-      height:'100%',
-      padding: 15,
+    flex: 1,
+    paddingTop: '10%',
   },
-  title1: {
-    color: '#0277bd',
-    fontSize: 25,
-    paddingVertical: 15,
+  baseText: {
+    // fontFamily: 'Cochin',
   },
-  txt: {
-    paddingTop: 50,
-    paddingRight: 20,
-    paddingLeft: 20,
+  titleText: {
     fontSize: 20,
-    fontWeight: "100",
-    fontFamily: 'sans-serif-thin'
+    fontWeight: 'bold',
+    color: '#0277bd',
   },
-  box1:{
-    width: '100%',
-  },
-  box2:{
-    width: '100%',
-  },
-  box3:{
-    position: 'absolute',
-    bottom: 15,
-    left:15,
-  },
-  hifi:{
+  card: {
+    flex: 2,
     width: 150,
-    height: 150,
-    resizeMode: 'contain',
-    paddingRight: 300,
-  },
-  title:{
-    fontSize: 28,
-    color:'#222',
-    paddingVertical: 15,
-  },
-  label:{
-    fontSize: 18,
-    color:'#777',
-    paddingVertical: 7,
-    lineHeight: 30,
-  },
-  txt2: {
-    paddingBottom: 150,
-    paddingLeft: 70,
-    fontSize: 16,
-    fontWeight: "100",
-    fontFamily: 'sans-serif-thin',
-  },
-  prevBtn:{
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: '#fff',
-    borderColor: '#999',
+    height: 250,
+    marginTop:20,
+    marginRight:5,
+    marginLeft:5,
     borderWidth: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  btnIcon1:{
-    fontSize: 32,
-    color: '#999',
-  },
-
-})
-
-AppRegistry.registerComponent('Onboarding21',()=>Onboarding21);
+    borderRadius: 3,
+  }
+});
