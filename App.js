@@ -21,19 +21,19 @@ export default class Onboarding21 extends Component{
           <Text>Please enter your mobile number </Text>
         </Text>
         <View style = {{ flex: 1, flexDirection: "row", paddingTop: 5, paddingLeft: 25, paddingRight: 25}}>
-          <View style = {{ flex: 0.2, marginBottom: 10 }}>
+          <View style = {{ flex: 0.2,  }}>
             <TextField inputContainerPadding={2}
-              style = {{ marginBottom: -12, paddingLeft: 300 }}
+              style = {{ paddingLeft: 300 }}
               label='+91'
               value={phone}
               onChangeText={ (phone) => this.setState({ phone }) }
             />
           </View>
-          <View style = {{ flex: 0.2, marginBottom: 10 }}>
+          <View style = {{ flex: 0.2, }}>
           </View>
-          <View style = {{ flex: 1, marginBottom: 10 }}>
+          <View style = {{ flex: 1, }}>
             <TextField inputContainerPadding={2}
-              style = {{ marginBottom: -12 }}
+              style = {{ }}
               label='Mobile'
               value={phone}
               onChangeText={ (phone) => this.setState({ phone }) }
