@@ -25,6 +25,7 @@
     "react": "16.2.0",
     "react-moment": "^0.7.0",
     "react-native": "0.52.0",
+    "react-native-circular-progress": "^0.2.0",
     "react-native-datepicker-dialog": "0.0.9",
     "react-native-fontawesome": "^5.7.0",
     "react-native-gesture-handler": "^1.0.0-alpha.41",

@@ -4,8 +4,9 @@ import {
   View,
   Image,
   Dimensions
-} from 'react-native'
-import Swiper from 'react-native-swiper'
+} from 'react-native';
+import Swiper from 'react-native-swiper';
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 const { width } = Dimensions.get('window')
 const loading = require('./Images/loading.gif')
 
@@ -76,8 +77,8 @@ export default class extends Component {
   render () {
     return (
 
-          <View style={{flex: 1, paddingBottom: 250, paddingLeft: 10, paddingRight: 10}}>
-            <Swiper loadMinimal loadMinimalSize={1} style={styles.wrapper} loop={false}>
+          <View style={{flex: 1, paddingBottom: 180, paddingLeft: 10, paddingRight: 10}}>
+            <Swiper loadMinimal loadMinimalSize={1} style={{}} loop={false}>
               {
                 this.state.imgList.map((item, i) => <Slide
                   loadHandle={this.loadHandle}
@@ -87,9 +88,34 @@ export default class extends Component {
                   key={i} />)
               }
             </Swiper>
-            <View>
-              <Text>Current Loaded Images: {this.state.loadQueue}</Text>
+            <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
+            <View style={{flexDirection: 'row', paddingTop: 20}}>
+              <AnimatedCircularProgress
+                size={120}
+                width={5}
+                fill={80}
+                tintColor="#00e0ff"
+                onAnimationComplete={() => console.log('onAnimationComplete')}
+                backgroundColor="#3d5875" />
+
+                <AnimatedCircularProgress
+                  size={120}
+                  width={5}
+                  fill={80}
+                  tintColor="#00e0ff"
+                  onAnimationComplete={() => console.log('onAnimationComplete')}
+                  backgroundColor="#3d5875" />
+                  
+                  <AnimatedCircularProgress
+                    size={120}
+                    width={5}
+                    fill={80}
+                    tintColor="#00e0ff"
+                    onAnimationComplete={() => console.log('onAnimationComplete')}
+                    backgroundColor="#3d5875" />
+
             </View>
+            <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
         </View>
     )
   }
