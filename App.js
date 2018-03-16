@@ -15,12 +15,24 @@ import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
 
 class Example extends React.Component {
   state = {
-    multiSliderValue: [3, 7],
+    multiSliderValue: [21, 55],
+    multiSliderValue1: [54, 169],
+    multiSliderValue2: [22, 55],
   };
 
   multiSliderValuesChange = (values) => {
     this.setState({
       multiSliderValue: values,
+    });
+  }
+  multiSliderValuesChange1 = (values) => {
+    this.setState({
+      multiSliderValue1: values,
+    });
+  }
+  multiSliderValuesChange2 = (values) => {
+    this.setState({
+      multiSliderValue2: values,
     });
   }
 
@@ -44,46 +56,53 @@ class Example extends React.Component {
         <View style={styles.sliders}>
             <View style={styles.sliderOne}>
               <Text style={styles.text}>Age</Text>
-              <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
-              <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[0]} - {this.state.multiSliderValue[1]}</Text>
             </View>
             <MultiSlider
               values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
               sliderLength={280}
               onValuesChange={this.multiSliderValuesChange}
               min={0}
-              max={10}
+              max={100}
               step={1}
+              selectedStyle={{backgroundColor: '#0277bd',}}
+              markerStyle={{backgroundColor: '#0277bd',}}
+              // containerStyle={{height:40,}}
               allowOverlap
               snapped
             />
             <View style={styles.sliderOne}>
-              <Text style={styles.text}>Age</Text>
-              <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
-              <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
+              <Text style={styles.text}>Height</Text>
+              <Text style={styles.text}>{this.state.multiSliderValue1[0]} cm - {this.state.multiSliderValue1[1]} cm</Text>
             </View>
             <MultiSlider
-              values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
+              values={[this.state.multiSliderValue1[0], this.state.multiSliderValue1[1]]}
               sliderLength={280}
-              onValuesChange={this.multiSliderValuesChange}
+              onValuesChange={this.multiSliderValuesChange1}
               min={0}
-              max={10}
+              max={100}
               step={1}
+              selectedStyle={{backgroundColor: '#0277bd',}}
+              markerStyle={{backgroundColor: '#0277bd',}}
+              // containerStyle={{height:40,}}
               allowOverlap
               snapped
             />
             <View style={styles.sliderOne}>
-              <Text style={styles.text}>Age</Text>
-              <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
-              <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
+              <Text style={styles.text}>Monthly Income</Text>
+              <Text style={styles.text}>{this.state.multiSliderValue2[0]} k - {this.state.multiSliderValue2[1]} k </Text>
+              <Text style={styles.text}></Text>
             </View>
             <MultiSlider
-              values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
+              values={[this.state.multiSliderValue2[0], this.state.multiSliderValue2[1]]}
               sliderLength={280}
-              onValuesChange={this.multiSliderValuesChange}
+              onValuesChange={this.multiSliderValuesChange2}
               min={0}
-              max={10}
+              max={100}
               step={1}
+              selectedStyle={{backgroundColor: '#0277bd',}}
+              markerStyle={{backgroundColor: '#0277bd',}}
+              // containerStyle={{height:40,}}
               allowOverlap
               snapped
             />
@@ -168,10 +187,10 @@ var styles = StyleSheet.create({
   },
   text: {
     alignSelf: 'center',
-    paddingVertical: 2,
+    paddingBottom: 20,
   },
   sliderOne: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
