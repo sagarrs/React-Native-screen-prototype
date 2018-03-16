@@ -40,6 +40,7 @@ class Example extends React.Component {
     ];
     return (
       <View style={styles.container}>
+        <Text style={styles.titleText}>Partner Preferences{'\n'}{'\n'}{'\n'}</Text>
         <View style={styles.sliders}>
             <View style={styles.sliderOne}>
               <Text style={styles.text}>Age</Text>
@@ -163,12 +164,14 @@ var styles = StyleSheet.create({
   sliders: {
     paddingLeft: 20,
     width: 280,
+    height: 200,
   },
   text: {
     alignSelf: 'center',
-    paddingVertical: 20,
+    paddingVertical: 2,
   },
   sliderOne: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
@@ -177,6 +180,7 @@ var styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '100',
     color: '#0277bd',
-    paddingTop: 20
+    paddingTop: 20,
+    paddingLeft: 20,
   },
 });
