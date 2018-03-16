@@ -1,118 +1,176 @@
-import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Image, ScrollView, TouchableHighlight, Linking } from 'react-native';
-import MaterialTabs from 'react-native-material-tabs';
-import RequestSent from './RequestSent';
+import React from 'react';
 
-const Img1 = 'https://i.ytimg.com/vi/9D1vO-7tfZg/maxresdefault.jpg'
-const Img2 = 'https://i.ytimg.com/vi/9D1vO-7tfZg/maxresdefault.jpg'
+import {
+  StyleSheet,
+  View,
+  Text,
+  Slider,
+  Image,
+  Platform,
+  ScrollView, TouchableWithoutFeedback
+} from 'react-native';
 
-export default class Example extends Component {
+import MultiSlider from '@ptomasroos/react-native-multi-slider';
+import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      titleText: "Your Matches",
-    };
-  }
-
+class Example extends React.Component {
   state = {
-    selectedTab: 0,
+    multiSliderValue: [3, 7],
   };
 
-  setTab(tab) {
-    this.setState({ selectedTab: tab });
+  multiSliderValuesChange = (values) => {
+    this.setState({
+      multiSliderValue: values,
+    });
   }
-
-  onPress = () => {
-      Linking.openURL('http://google.com')
-  }
- // onPress = {() => Linking.openURL('http://google.com')}
 
   render() {
+    const options = [
+      'Yes',
+      'No',
+    ];
+    const option = [
+      'Vegetarian',
+      'Non Vegetarian',
+    ];
+    const opt = [
+      'Never',
+      'Occassionally',
+      'Regularly'
+    ];
     return (
       <View style={styles.container}>
-        <ScrollView>
-          <Text style={styles.titleText} onPress={this.onPressTitle}>
-            {this.state.titleText}{'\n'}
-          </Text>
-        <View>
-          <MaterialTabs
-            items={['All', 'Request sent', 'Request recieved']}
-            selectedIndex={this.state.selectedTab}
-            onChange={this.setTab.bind(this)}
-            barColor="#ffffff"
-            inactiveTextColor="#000000"
-            indicatorColor="#ec0d7c"
-            activeTextColor="black"
-            // textStyle={{ fontFamily: 'Papyrus' }}
-          />
+        <View style={styles.sliders}>
+            <View style={styles.sliderOne}>
+              <Text style={styles.text}>Age</Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
+            </View>
+            <MultiSlider
+              values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
+              sliderLength={280}
+              onValuesChange={this.multiSliderValuesChange}
+              min={0}
+              max={10}
+              step={1}
+              allowOverlap
+              snapped
+            />
+            <View style={styles.sliderOne}>
+              <Text style={styles.text}>Age</Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
+            </View>
+            <MultiSlider
+              values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
+              sliderLength={280}
+              onValuesChange={this.multiSliderValuesChange}
+              min={0}
+              max={10}
+              step={1}
+              allowOverlap
+              snapped
+            />
+            <View style={styles.sliderOne}>
+              <Text style={styles.text}>Age</Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[0]} </Text>
+              <Text style={styles.text}>{this.state.multiSliderValue[1]}</Text>
+            </View>
+            <MultiSlider
+              values={[this.state.multiSliderValue[0], this.state.multiSliderValue[1]]}
+              sliderLength={280}
+              onValuesChange={this.multiSliderValuesChange}
+              min={0}
+              max={10}
+              step={1}
+              allowOverlap
+              snapped
+            />
         </View>
-          <View style={{flexDirection: "row"}}>
-          <TouchableHighlight onPress={this.onPress} underlayColor={'#fff'}>
-            <View style={styles.card}>
-              <Image style={{flex: 1}} source={{uri: Img1}}/>
-              <View>
-              <View style={{backgroundColor: '#0277bd'}}>
-                <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
-              </View>
-                <Text style={{color: '#0277bd', marginTop: 2, marginLeft: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Bangalore, India</Text>
-              </View>
-            </View>
-          </TouchableHighlight>
-          <TouchableHighlight onPress={this.onPress} underlayColor={'#fff'}>
-            <View style={styles.card}>
-              <Image style={{flex: 1}} source={{uri: Img2}}/>
-              <View>
-                <View style={{backgroundColor: '#0277bd'}}>
-                  <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
-                </View>
-                <Text style={{color: '#0277bd', marginTop: 2, marginLeft: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Bangalore, India</Text>
-              </View>
-            </View>
-          </TouchableHighlight>
+        <View style={{padding: 20}}>
+          <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+            <Text>Same location</Text>
+              <SegmentedControls
+                containerStyle={{width:160}}
+                options={ options }
+              />
           </View>
-          <View style={{flexDirection: "row"}}>
-          <TouchableHighlight onPress={this.onPress} underlayColor={'#fff'}>
-            <View style={styles.card}>
-              <Image style={{flex: 1}} source={{uri: Img1}}/>
-              <View>
-              <View style={{backgroundColor: '#0277bd'}}>
-                <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
-              </View>
-                <Text style={{color: '#0277bd', marginTop: 2, marginLeft: 4}}>Gauri . 26</Text>
-                <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Asst. Editor</Text>
-                <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Bangalore, India</Text>
-              </View>
-            </View>
-            </TouchableHighlight>
-            <TouchableHighlight onPress={this.onPress} underlayColor={'#fff'}>
-              <View style={styles.card}>
-                <Image style={{flex: 1}} source={{uri: Img2}}/>
-                <View>
-                  <View style={{backgroundColor: '#0277bd'}}>
-                    <Text style={{color: '#ffffff', textAlign: 'center'}}>90% compatible</Text>
-                  </View>
-                  <Text style={{color: '#0277bd', marginTop: 2, marginLeft: 4}}>Gauri . 26</Text>
-                  <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Asst. Editor</Text>
-                  <Text style={{color: '#A9A9A9', marginTop: 1, marginLeft: 4}}>Bangalore, India</Text>
-                </View>
-              </View>
-            </TouchableHighlight>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Same religion</Text>
+              <SegmentedControls
+                containerStyle={{width:160}}
+                options={ options }
+              />
           </View>
-        </ScrollView>
-    </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Same mother tongue</Text>
+              <SegmentedControls
+                containerStyle={{width:160}}
+                options={ options }
+              />
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Sagar</Text>
+              <SegmentedControls
+                containerStyle={{width:160}}
+                options={ options }
+              />
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Same caste</Text>
+              <SegmentedControls
+                containerStyle={{width:160}}
+                options={ options }
+              />
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Food preferences</Text>
+              <SegmentedControls
+                containerStyle={{width:180}}
+                optionStyle={{fontSize: 12,}}
+                options={ option }
+              />
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Smoke</Text>
+              <SegmentedControls
+                containerStyle={{width:240}}
+                optionStyle={{fontSize: 12,}}
+                options={ opt }
+              />
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'space-between', paddingTop: 10}}>
+            <Text>Drink</Text>
+              <SegmentedControls
+                containerStyle={{width:240}}
+                optionStyle={{fontSize: 12,}}
+                options={ opt }
+              />
+          </View>
+        </View>
+      </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+export default Example;
+
+var styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+  },
+  sliders: {
+    paddingLeft: 20,
+    width: 280,
+  },
+  text: {
+    alignSelf: 'center',
+    paddingVertical: 20,
+  },
+  sliderOne: {
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   },
   titleText: {
     flex: 1,
@@ -121,14 +179,4 @@ const styles = StyleSheet.create({
     color: '#0277bd',
     paddingTop: 20
   },
-  card: {
-    flex: 2,
-    width: 160,
-    height: 235,
-    marginTop:20,
-    marginRight:5,
-    marginLeft:5,
-    borderWidth: 1,
-    borderRadius: 3,
-  }
 });
