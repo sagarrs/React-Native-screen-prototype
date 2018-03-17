@@ -88,68 +88,71 @@ export default class extends Component {
                   key={i} />)
               }
             </Swiper>
+            <Text style={{color: '#0277bd', fontSize: 20}}>Compatibility together</Text>
             <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
-            <View style={{flexDirection: 'row', paddingTop: 20}}>
-              <AnimatedCircularProgress
-                size={110}
-                width={5}
-                fill={80}
-                tintColor="#00e0ff"
-                onAnimationComplete={() => console.log('onAnimationComplete')}
-                backgroundColor="#3d5875" />
+            <View style={{flexDirection: 'row', paddingTop: 30}}>
+             <View style={{paddingRight: 10}}>
+                <AnimatedCircularProgress
+                  size={100}
+                  width={3}
+                  fill={80}
+                  tintColor="#00e0ff"
+                  onAnimationComplete={() => console.log('onAnimationComplete')}
+                  backgroundColor="#3d5875" />
+              </View>
             <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
-              <View style={{flexDirection: 'column'}}>
+              <View style={{flexDirection: 'column', paddingLeft: 10}}>
                 <View style={{flexDirection: 'row'}}>
                   <AnimatedCircularProgress
-                    size={75}
-                    width={5}
+                    size={70}
+                    width={3}
                     fill={80}
                     tintColor="#00e0ff"
                     onAnimationComplete={() => console.log('onAnimationComplete')}
                     backgroundColor="#3d5875" />
 
                     <AnimatedCircularProgress
-                      size={75}
-                      width={5}
+                      size={70}
+                      width={3}
                       fill={80}
                       tintColor="#00e0ff"
                       onAnimationComplete={() => console.log('onAnimationComplete')}
                       backgroundColor="#3d5875" />
 
                     <AnimatedCircularProgress
-                      size={75}
-                      width={5}
+                      size={70}
+                      width={3}
                       fill={80}
                       tintColor="#00e0ff"
                       onAnimationComplete={() => console.log('onAnimationComplete')}
                       backgroundColor="#3d5875" />
                   </View>
-                  <View style={{flexDirection: 'row'}}>
+                  <View style={{flexDirection: 'row', paddingTop: 5}}>
                     <AnimatedCircularProgress
-                      size={75}
-                      width={5}
+                      size={71}
+                      width={3}
                       fill={80}
                       tintColor="#00e0ff"
                       onAnimationComplete={() => console.log('onAnimationComplete')}
                       backgroundColor="#3d5875" />
 
                       <AnimatedCircularProgress
-                        size={75}
-                        width={5}
+                        size={71}
+                        width={3}
                         fill={80}
                         tintColor="#00e0ff"
                         onAnimationComplete={() => console.log('onAnimationComplete')}
                         backgroundColor="#3d5875" />
 
                       <AnimatedCircularProgress
-                        size={75}
-                        width={5}
+                        size={71}
+                        width={3}
                         fill={80}
                         tintColor="#00e0ff"
                         onAnimationComplete={() => console.log('onAnimationComplete')}
                         backgroundColor="#3d5875" />
-                    </View>    
+                    </View>
                 </View>
 
             </View>
