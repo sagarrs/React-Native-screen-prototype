@@ -39,7 +39,7 @@ const styles = {
   loadingImage: {
     width: 60,
     height: 60
-  }
+  },
 }
 
 const Slide = props => {
@@ -98,7 +98,16 @@ export default class extends Component {
                   fill={80}
                   tintColor="#00e0ff"
                   onAnimationComplete={() => console.log('onAnimationComplete')}
-                  backgroundColor="#3d5875" />
+                  backgroundColor="#3d5875">
+                  {
+                    (fill) => (
+                      <Text style={styles.points}>
+                        {fill}
+                      </Text>
+                    )
+                  }
+                </AnimatedCircularProgress>
+                <Text style={{fontSize: 11, paddingTop: 5}}>Overall compatibility</Text>
               </View>
             <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
@@ -110,7 +119,15 @@ export default class extends Component {
                     fill={80}
                     tintColor="#00e0ff"
                     onAnimationComplete={() => console.log('onAnimationComplete')}
-                    backgroundColor="#3d5875" />
+                    backgroundColor="#3d5875">
+                    {
+                      (fill) => (
+                        <Text style={styles.points}>
+                          {fill}
+                        </Text>
+                      )
+                    }
+                  </AnimatedCircularProgress>
 
                     <AnimatedCircularProgress
                       size={70}
@@ -118,7 +135,15 @@ export default class extends Component {
                       fill={80}
                       tintColor="#00e0ff"
                       onAnimationComplete={() => console.log('onAnimationComplete')}
-                      backgroundColor="#3d5875" />
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            {fill}
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
 
                     <AnimatedCircularProgress
                       size={70}
@@ -126,7 +151,15 @@ export default class extends Component {
                       fill={80}
                       tintColor="#00e0ff"
                       onAnimationComplete={() => console.log('onAnimationComplete')}
-                      backgroundColor="#3d5875" />
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            {fill}
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
                   </View>
                   <View style={{flexDirection: 'row', paddingTop: 5}}>
                     <AnimatedCircularProgress
@@ -135,7 +168,15 @@ export default class extends Component {
                       fill={80}
                       tintColor="#00e0ff"
                       onAnimationComplete={() => console.log('onAnimationComplete')}
-                      backgroundColor="#3d5875" />
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            {fill}
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
 
                       <AnimatedCircularProgress
                         size={71}
@@ -143,7 +184,15 @@ export default class extends Component {
                         fill={80}
                         tintColor="#00e0ff"
                         onAnimationComplete={() => console.log('onAnimationComplete')}
-                        backgroundColor="#3d5875" />
+                        backgroundColor="#3d5875">
+                        {
+                          (fill) => (
+                            <Text style={styles.points}>
+                              {fill}
+                            </Text>
+                          )
+                        }
+                      </AnimatedCircularProgress>
 
                       <AnimatedCircularProgress
                         size={71}
@@ -151,7 +200,15 @@ export default class extends Component {
                         fill={80}
                         tintColor="#00e0ff"
                         onAnimationComplete={() => console.log('onAnimationComplete')}
-                        backgroundColor="#3d5875" />
+                        backgroundColor="#3d5875">
+                        {
+                          (fill) => (
+                            <Text style={styles.points}>
+                              {fill}
+                            </Text>
+                          )
+                        }
+                      </AnimatedCircularProgress>
                     </View>
                 </View>
 
