@@ -93,7 +93,7 @@ export default class extends Component {
             <View style={{flexDirection: 'row', paddingTop: 30}}>
              <View style={{paddingRight: 10}}>
                 <AnimatedCircularProgress
-                  size={100}
+                  size={90}
                   width={3}
                   fill={80}
                   tintColor="#00e0ff"
@@ -114,7 +114,7 @@ export default class extends Component {
 
               <View style={{flexDirection: 'column', paddingLeft: 10}}>
                     <AnimatedCircularProgress
-                      size={70}
+                      size={60}
                       width={3}
                       fill={80}
                       tintColor="#00e0ff"
@@ -128,10 +128,10 @@ export default class extends Component {
                         )
                       }
                     </AnimatedCircularProgress>
-                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+                    <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5}}>    Values</Text>
 
                     <AnimatedCircularProgress
-                      size={70}
+                      size={60}
                       width={3}
                       fill={80}
                       tintColor="#00e0ff"
@@ -145,13 +145,13 @@ export default class extends Component {
                         )
                       }
                     </AnimatedCircularProgress>
-                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+                    <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10}}>Intellectual</Text>
             </View>
 
             <View style={{flexDirection: 'row'}}>
               <View style={{flexDirection: 'column', paddingLeft: 10}}>
                     <AnimatedCircularProgress
-                      size={70}
+                      size={60}
                       width={3}
                       fill={80}
                       tintColor="#00e0ff"
@@ -165,10 +165,10 @@ export default class extends Component {
                         )
                       }
                     </AnimatedCircularProgress>
-                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+                    <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10}}>Relationship</Text>
 
                     <AnimatedCircularProgress
-                      size={70}
+                      size={60}
                       width={3}
                       fill={80}
                       tintColor="#00e0ff"
@@ -182,14 +182,14 @@ export default class extends Component {
                         )
                       }
                     </AnimatedCircularProgress>
-                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+                    <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10}}>Relationship</Text>
             </View>
           </View>
 
           <View style={{flexDirection: 'row'}}>
             <View style={{flexDirection: 'column', paddingLeft: 10}}>
                   <AnimatedCircularProgress
-                    size={70}
+                    size={60}
                     width={3}
                     fill={80}
                     tintColor="#00e0ff"
@@ -203,10 +203,10 @@ export default class extends Component {
                       )
                     }
                   </AnimatedCircularProgress>
-                  <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+                  <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5}}>  Emotional</Text>
 
                   <AnimatedCircularProgress
-                    size={70}
+                    size={60}
                     width={3}
                     fill={80}
                     tintColor="#00e0ff"
@@ -220,7 +220,7 @@ export default class extends Component {
                       )
                     }
                   </AnimatedCircularProgress>
-                  <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+                  <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5}}>     Social</Text>
           </View>
         </View>
 
