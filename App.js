@@ -102,17 +102,92 @@ export default class extends Component {
                   {
                     (fill) => (
                       <Text style={styles.points}>
-                        {fill}
+                        80
                       </Text>
                     )
                   }
                 </AnimatedCircularProgress>
                 <Text style={{fontSize: 11, paddingTop: 5}}>Overall compatibility</Text>
               </View>
+
             <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
               <View style={{flexDirection: 'column', paddingLeft: 10}}>
-                <View style={{flexDirection: 'row'}}>
+                    <AnimatedCircularProgress
+                      size={70}
+                      width={3}
+                      fill={80}
+                      tintColor="#00e0ff"
+                      onAnimationComplete={() => console.log('onAnimationComplete')}
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            80
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
+                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+
+                    <AnimatedCircularProgress
+                      size={70}
+                      width={3}
+                      fill={80}
+                      tintColor="#00e0ff"
+                      onAnimationComplete={() => console.log('onAnimationComplete')}
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            80
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
+                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+            </View>
+
+            <View style={{flexDirection: 'row'}}>
+              <View style={{flexDirection: 'column', paddingLeft: 10}}>
+                    <AnimatedCircularProgress
+                      size={70}
+                      width={3}
+                      fill={80}
+                      tintColor="#00e0ff"
+                      onAnimationComplete={() => console.log('onAnimationComplete')}
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            80
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
+                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+
+                    <AnimatedCircularProgress
+                      size={70}
+                      width={3}
+                      fill={80}
+                      tintColor="#00e0ff"
+                      onAnimationComplete={() => console.log('onAnimationComplete')}
+                      backgroundColor="#3d5875">
+                      {
+                        (fill) => (
+                          <Text style={styles.points}>
+                            80
+                          </Text>
+                        )
+                      }
+                    </AnimatedCircularProgress>
+                    <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+            </View>
+          </View>
+
+          <View style={{flexDirection: 'row'}}>
+            <View style={{flexDirection: 'column', paddingLeft: 10}}>
                   <AnimatedCircularProgress
                     size={70}
                     width={3}
@@ -123,96 +198,33 @@ export default class extends Component {
                     {
                       (fill) => (
                         <Text style={styles.points}>
-                          {fill}
+                          80
                         </Text>
                       )
                     }
                   </AnimatedCircularProgress>
+                  <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
 
-                    <AnimatedCircularProgress
-                      size={70}
-                      width={3}
-                      fill={80}
-                      tintColor="#00e0ff"
-                      onAnimationComplete={() => console.log('onAnimationComplete')}
-                      backgroundColor="#3d5875">
-                      {
-                        (fill) => (
-                          <Text style={styles.points}>
-                            {fill}
-                          </Text>
-                        )
-                      }
-                    </AnimatedCircularProgress>
+                  <AnimatedCircularProgress
+                    size={70}
+                    width={3}
+                    fill={80}
+                    tintColor="#00e0ff"
+                    onAnimationComplete={() => console.log('onAnimationComplete')}
+                    backgroundColor="#3d5875">
+                    {
+                      (fill) => (
+                        <Text style={styles.points}>
+                          80
+                        </Text>
+                      )
+                    }
+                  </AnimatedCircularProgress>
+                  <Text style={{fontSize: 11, paddingTop: 5}}>Overall</Text>
+          </View>
+        </View>
 
-                    <AnimatedCircularProgress
-                      size={70}
-                      width={3}
-                      fill={80}
-                      tintColor="#00e0ff"
-                      onAnimationComplete={() => console.log('onAnimationComplete')}
-                      backgroundColor="#3d5875">
-                      {
-                        (fill) => (
-                          <Text style={styles.points}>
-                            {fill}
-                          </Text>
-                        )
-                      }
-                    </AnimatedCircularProgress>
-                  </View>
-                  <View style={{flexDirection: 'row', paddingTop: 5}}>
-                    <AnimatedCircularProgress
-                      size={71}
-                      width={3}
-                      fill={80}
-                      tintColor="#00e0ff"
-                      onAnimationComplete={() => console.log('onAnimationComplete')}
-                      backgroundColor="#3d5875">
-                      {
-                        (fill) => (
-                          <Text style={styles.points}>
-                            {fill}
-                          </Text>
-                        )
-                      }
-                    </AnimatedCircularProgress>
-
-                      <AnimatedCircularProgress
-                        size={71}
-                        width={3}
-                        fill={80}
-                        tintColor="#00e0ff"
-                        onAnimationComplete={() => console.log('onAnimationComplete')}
-                        backgroundColor="#3d5875">
-                        {
-                          (fill) => (
-                            <Text style={styles.points}>
-                              {fill}
-                            </Text>
-                          )
-                        }
-                      </AnimatedCircularProgress>
-
-                      <AnimatedCircularProgress
-                        size={71}
-                        width={3}
-                        fill={80}
-                        tintColor="#00e0ff"
-                        onAnimationComplete={() => console.log('onAnimationComplete')}
-                        backgroundColor="#3d5875">
-                        {
-                          (fill) => (
-                            <Text style={styles.points}>
-                              {fill}
-                            </Text>
-                          )
-                        }
-                      </AnimatedCircularProgress>
-                    </View>
-                </View>
-
-            </View>
+          </View>
         </View>
     )
   }
