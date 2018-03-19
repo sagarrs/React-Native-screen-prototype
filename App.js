@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 const { width } = Dimensions.get('window')
 const loading = require('./Images/loading.gif')
 
@@ -223,8 +224,80 @@ export default class extends Component {
                         <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5}}>     Social</Text>
                       </View>
                     </View>
+              </View>
+
+              <View style={{paddingTop: 30}}>
+                <Text style={{color: '#0277bd', fontSize: 20}}>Personal details{'\n'}</Text>
+                <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
+
+                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
+                    <View style={{paddingLeft: 30}}>
+                      <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                    </View>
+                    <View style={{paddingLeft: 50}}>
+                      <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
+                    </View>
+                    <View style={{paddingLeft: 70}}>
+                      <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
+                    </View>
+                  </View>
+
+                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
+                    <View style={{paddingLeft: 30}}>
+                      <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                    </View>
+                    <View style={{paddingLeft: 50}}>
+                      <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
+                    </View>
+                    <View style={{paddingLeft: 70}}>
+                      <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
+                    </View>
+                  </View>
 
               </View>
+
+              <View style={{paddingTop: 30}}>
+                <Text style={{color: '#0277bd', fontSize: 20}}>Education and career{'\n'}</Text>
+                <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
+
+                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
+                    <View style={{paddingLeft: 30}}>
+                      <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                    </View>
+                    <View style={{paddingLeft: 50}}>
+                      <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
+                    </View>
+                    <View style={{paddingLeft: 70}}>
+                      <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
+                    </View>
+                  </View>
+
+                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
+                    <View style={{paddingLeft: 30}}>
+                      <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                    </View>
+                    <View style={{paddingLeft: 50}}>
+                      <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
+                    </View>
+                    <View style={{paddingLeft: 70}}>
+                      <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
+                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
+                    </View>
+                  </View>
+
+              </View>
+
           </ScrollView>
         </View>
     )
