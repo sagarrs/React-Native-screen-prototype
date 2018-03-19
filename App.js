@@ -230,69 +230,79 @@ export default class extends Component {
                 <Text style={{color: '#0277bd', fontSize: 20}}>Personal details{'\n'}</Text>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
-                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
-                    <View style={{paddingLeft: 30}}>
-                      <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                  <View style={{flex:1, flexDirection: 'row'}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                      <View style={{paddingLeft: 30}}>
+                        <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                      </View>
+                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                        <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Dont smoke{'\n'}</Text>
+                      </View>
                     </View>
-                    <View style={{paddingLeft: 50}}>
-                      <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
-                    </View>
-                    <View style={{paddingLeft: 70}}>
-                      <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
-                    </View>
-                  </View>
 
-                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
-                    <View style={{paddingLeft: 30}}>
-                      <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                      <View style={{paddingLeft: 30}}>
+                        <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
+                      </View>
+                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                        <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Drinks{"\n"}ocassionally</Text>
+                      </View>
                     </View>
-                    <View style={{paddingLeft: 50}}>
-                      <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
-                    </View>
-                    <View style={{paddingLeft: 70}}>
-                      <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
+
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                      <View style={{paddingLeft: 30}}>
+                        <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Hindi</Text>
+                      </View>
+                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                        <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Non{"\n"}Vegetarian</Text>
+                      </View>
                     </View>
                   </View>
 
               </View>
 
               <View style={{paddingTop: 30}}>
-                <Text style={{color: '#0277bd', fontSize: 20}}>Education and career{'\n'}</Text>
+                <Text style={{color: '#0277bd', fontSize: 20}}>Personal details{'\n'}</Text>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
-                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
-                    <View style={{paddingLeft: 30}}>
-                      <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                  <View style={{flex:1, flexDirection: 'row'}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                      <View style={{paddingLeft: 30}}>
+                        <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                      </View>
+                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                        <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Dont smoke{'\n'}</Text>
+                      </View>
                     </View>
-                    <View style={{paddingLeft: 50}}>
-                      <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
-                    </View>
-                    <View style={{paddingLeft: 70}}>
-                      <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
-                    </View>
-                  </View>
 
-                  <View style={{flex:1, flexDirection: 'row', paddingTop: 10,}}>
-                    <View style={{paddingLeft: 30}}>
-                      <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                      <View style={{paddingLeft: 30}}>
+                        <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
+                      </View>
+                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                        <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Drinks{"\n"}ocassionally</Text>
+                      </View>
                     </View>
-                    <View style={{paddingLeft: 50}}>
-                      <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
-                    </View>
-                    <View style={{paddingLeft: 70}}>
-                      <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
-                      <Text style={{color: '#000000', fontSize: 12}}>Hindi{'\n'}</Text>
+
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                      <View style={{paddingLeft: 30}}>
+                        <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Hindi</Text>
+                      </View>
+                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                        <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <Text style={{color: '#000000', fontSize: 12}}>Non{"\n"}Vegetarian</Text>
+                      </View>
                     </View>
                   </View>
 
