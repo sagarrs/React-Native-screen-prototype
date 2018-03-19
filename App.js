@@ -89,6 +89,26 @@ export default class extends Component {
               }
             </Swiper>
           <ScrollView>
+
+          <View style={{paddingBottom: 20}}>
+            <Text style={{color: '#000000', fontSize: 20}}>Melbin Kuriakose{"\n"}</Text>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{flexDirection: 'row'}}>
+                <FontAwesome name='birthday-cake' style={{fontSize: 16, color: '#0277bd'}}/>
+                <Text style={{color: '#000000', fontSize: 16}}>  25</Text>
+              </View>
+              <View style={{flexDirection: 'row', paddingLeft:5}}>
+                <FontAwesome name='map-marker' style={{fontSize: 16, color: '#0277bd'}}/>
+                <Text style={{color: '#000000', fontSize: 16}}>  Bangalore, India</Text>
+              </View>
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <FontAwesome name='briefcase' style={{fontSize: 16, color: '#0277bd'}}/>
+              <Text style={{color: '#000000', fontSize: 16}}>  Product designer, Google</Text>
+            </View>
+          </View>
+
+
              <Text style={{color: '#0277bd', fontSize: 20}}>Compatibility together</Text>
               <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
               <View style={{flexDirection: 'row', paddingTop: 30}}>
@@ -232,33 +252,33 @@ export default class extends Component {
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View style={{paddingLeft: 30}}>
-                        <FontAwesome name='bell' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='bell' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>Hindu{"\n"}Maheshwari</Text>
                       </View>
                       <View style={{paddingLeft: 30, paddingTop: 10}}>
-                        <FontAwesome name='male' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='male' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>Dont smoke{'\n'}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View style={{paddingLeft: 30}}>
-                        <FontAwesome name='align-right' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='align-right' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>5ft 3in{'\n'}</Text>
                       </View>
                       <View style={{paddingLeft: 30, paddingTop: 10}}>
-                        <FontAwesome name='coffee' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='coffee' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>Drinks{"\n"}ocassionally</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View style={{paddingLeft: 30}}>
-                        <FontAwesome name='language' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='language' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>Hindi</Text>
                       </View>
                       <View style={{paddingLeft: 30, paddingTop: 10}}>
-                        <FontAwesome name='home' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='home' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>Non{"\n"}Vegetarian</Text>
                       </View>
                     </View>
@@ -271,25 +291,25 @@ export default class extends Component {
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View style={{paddingLeft: 30}}>
-                        <FontAwesome name='graduation-cap' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='graduation-cap' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>M.Tech</Text>
                       </View>
                       <View style={{paddingLeft: 30, paddingTop: 10}}>
-                        <FontAwesome name='credit-card' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='credit-card' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>1,20,000 - 1,50,000 per month</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View style={{paddingLeft: 30}}>
-                        <FontAwesome name='university' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='university' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>IIT Mumbai{'\n'}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View style={{paddingLeft: 30}}>
-                        <FontAwesome name='briefcase' style={{fontSize: 26, color: '#00e0ff'}}/>
+                        <FontAwesome name='briefcase' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#000000', fontSize: 12}}>Product designer, Google</Text>
                       </View>
                     </View>
@@ -303,30 +323,30 @@ export default class extends Component {
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
                       <Text style={{color: '#000000', fontSize: 12}}>Moble   </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#00e0ff'}}/>
+                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
                     </View>
                     <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
                       <Text style={{color: '#000000', fontSize: 12}}>Work email   </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#00e0ff'}}/>
+                      <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
                     </View>
                     <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
                       <Text style={{color: '#000000', fontSize: 12}}>Personal email   </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#00e0ff'}}/>
+                      <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
                     </View>
                   </View>
 
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
                       <Text style={{color: '#000000', fontSize: 12}}>LinkedIn </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#00e0ff'}}/>
+                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
                     </View>
                     <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
                       <Text style={{color: '#000000', fontSize: 12}}>Facebook  </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#00e0ff'}}/>
+                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
                     </View>
                     <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
                       <Text style={{color: '#000000', fontSize: 12}}>Government ID   </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#00e0ff'}}/>
+                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
                     </View>
                   </View>
 
