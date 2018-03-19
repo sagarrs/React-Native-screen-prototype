@@ -36,6 +36,7 @@
     "react-native-radio-buttons": "^1.0.0",
     "react-native-segmented-control-tab": "^3.2.2",
     "react-native-swiper": "^1.5.13",
-    "react-native-tab-view": "0.0.74"
+    "react-native-tab-view": "0.0.74",
+    "react-native-vector-icons": "^4.5.0"
   }
 }
