@@ -101,9 +101,11 @@ export default class extends Component {
           <ScrollView>
 
           <View style={{paddingBottom: 20}}>
-            <View style={{flex:1, flexDirection: 'row',}}>
-              <Text style={{color: '#000000', fontSize: 20}}>{this.state.data.first_name}{"\n"}</Text>
-              <View style={{paddingLeft: 80}}>
+            <View style={{flexDirection: 'row',}}>
+              <View>
+                <Text style={{color: '#000000', fontSize: 20, paddingRight: 100}}>{this.state.data.first_name}</Text>
+              </View>
+              <View style={{position: 'absolute', right: 15}}>
                 <Button title="Connect" color="#0277bd" onPress={() => {}}/>
               </View>
             </View>
