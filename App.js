@@ -3,7 +3,7 @@ import {
   Text,
   View,
   Image,
-  Dimensions, ScrollView,
+  Dimensions, ScrollView, Button,
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
@@ -91,19 +91,24 @@ export default class extends Component {
           <ScrollView>
 
           <View style={{paddingBottom: 20}}>
-            <Text style={{color: '#000000', fontSize: 20}}>Melbin Kuriakose{"\n"}</Text>
+            <View style={{flex:1, flexDirection: 'row',}}>
+              <Text style={{color: '#000000', fontSize: 20}}>Melbin Kuriakose{"\n"}</Text>
+              <View style={{paddingLeft: 80}}>
+                <Button title="Connect" color="#0277bd" onPress={() => {}}/>
+              </View>
+            </View>
             <View style={{flexDirection: 'row'}}>
               <View style={{flexDirection: 'row'}}>
-                <FontAwesome name='birthday-cake' style={{fontSize: 16, color: '#0277bd'}}/>
+                <FontAwesome name='birthday-cake' style={{fontSize: 14, color: '#0277bd'}}/>
                 <Text style={{color: '#000000', fontSize: 16}}>  25</Text>
               </View>
               <View style={{flexDirection: 'row', paddingLeft:5}}>
-                <FontAwesome name='map-marker' style={{fontSize: 16, color: '#0277bd'}}/>
+                <FontAwesome name='map-marker' style={{fontSize: 14, color: '#0277bd'}}/>
                 <Text style={{color: '#000000', fontSize: 16}}>  Bangalore, India</Text>
               </View>
             </View>
             <View style={{flexDirection: 'row'}}>
-              <FontAwesome name='briefcase' style={{fontSize: 16, color: '#0277bd'}}/>
+              <FontAwesome name='briefcase' style={{fontSize: 14, color: '#0277bd'}}/>
               <Text style={{color: '#000000', fontSize: 16}}>  Product designer, Google</Text>
             </View>
           </View>
@@ -247,6 +252,14 @@ export default class extends Component {
               </View>
 
               <View style={{paddingTop: 30}}>
+                <Text style={{color: '#0277bd', fontSize: 20}}>About me{'\n'}</Text>
+                <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
+                <View style={{paddingTop: 5}}>
+                  <Text style={{fontSize: 16}}>I am a dedicated person in a family of four, i enjoy reading, meeting new people and finding ways to help them have a uplifting experience. I am a sapiosexual person. {'\n'}</Text>
+                </View>
+              </View>
+
+              <View style={{paddingTop: 30}}>
                 <Text style={{color: '#0277bd', fontSize: 20}}>Personal details{'\n'}</Text>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
@@ -286,7 +299,7 @@ export default class extends Component {
               </View>
 
               <View style={{paddingTop: 30}}>
-                <Text style={{color: '#0277bd', fontSize: 20}}>Profile verification{'\n'}</Text>
+                <Text style={{color: '#0277bd', fontSize: 20}}>Education and career{'\n'}</Text>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
