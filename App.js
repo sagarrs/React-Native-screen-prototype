@@ -64,10 +64,12 @@ export default class extends Component {
         'https://gitlab.pro/yuji/demo/uploads/4421f77012d43a0b4e7cfbe1144aac7c/XFVzKhq.jpg',
         'https://gitlab.pro/yuji/demo/uploads/576ef91941b0bda5761dde6914dae9f0/kD3eeHe.jpg'
       ],
-      loadQueue: [0, 0, 0, 0]
+      loadQueue: [0, 0, 0, 0],
+      data: ''
     }
     this.loadHandle = this.loadHandle.bind(this)
   }
+
   loadHandle (i) {
     let loadQueue = this.state.loadQueue
     loadQueue[i] = 1
@@ -75,6 +77,14 @@ export default class extends Component {
       loadQueue
     })
   }
+
+  componentDidMount = () => {
+    var myObj = require('./JsonData.json');
+      this.setState({
+        data: myObj
+      })
+    }
+
   render () {
     return (
           <View style={{flex: 1, paddingBottom: 30, paddingLeft: 10, paddingRight: 10}}>
@@ -92,7 +102,7 @@ export default class extends Component {
 
           <View style={{paddingBottom: 20}}>
             <View style={{flex:1, flexDirection: 'row',}}>
-              <Text style={{color: '#000000', fontSize: 20}}>Melbin Kuriakose{"\n"}</Text>
+              <Text style={{color: '#000000', fontSize: 20}}>{this.state.data.first_name}{"\n"}</Text>
               <View style={{paddingLeft: 80}}>
                 <Button title="Connect" color="#0277bd" onPress={() => {}}/>
               </View>
