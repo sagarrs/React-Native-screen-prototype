@@ -127,8 +127,10 @@ export default class extends Component {
             </View>
           </View>
 
-
-             <Text style={{color: '#0277bd', fontSize: 20}}>Compatibility together</Text>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{width: 10, height: 25, backgroundColor: '#ea0e79'}} />
+                <Text style={{color: '#0277bd', fontSize: 20}}>  Compatibility together</Text>
+              </View>
               <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
               <View style={{flexDirection: 'row', paddingTop: 30}}>
                  <View style={{paddingRight: 10}}>
@@ -266,7 +268,10 @@ export default class extends Component {
               </View>
 
               <View style={{paddingTop: 30}}>
-                <Text style={{color: '#0277bd', fontSize: 20}}>About me{'\n'}</Text>
+                <View style={{flexDirection: 'row'}}>
+                  <View style={{width: 10, height: 25, backgroundColor: '#ea0e79'}} />
+                  <Text style={{color: '#0277bd', fontSize: 20}}>  About me{'\n'}</Text>
+                </View>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                 <View style={{paddingTop: 10}}>
                   <Text style={{fontSize: 14, color: '#616975', lineHeight: 25}}>{this.state.data.about_myself} {'\n'}</Text>
@@ -274,7 +279,10 @@ export default class extends Component {
               </View>
 
               <View style={{paddingTop: 30}}>
-                <Text style={{color: '#0277bd', fontSize: 20}}>Personal details{'\n'}</Text>
+                <View style={{flexDirection: 'row'}}>
+                  <View style={{width: 10, height: 25, backgroundColor: '#ea0e79'}} />
+                  <Text style={{color: '#0277bd', fontSize: 20}}>  Personal details{'\n'}</Text>
+                </View>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
@@ -313,7 +321,10 @@ export default class extends Component {
               </View>
 
               <View style={{paddingTop: 30}}>
-                <Text style={{color: '#0277bd', fontSize: 20}}>Education and career{'\n'}</Text>
+                <View style={{flexDirection: 'row'}}>
+                  <View style={{width: 10, height: 25, backgroundColor: '#ea0e79'}} />
+                  <Text style={{color: '#0277bd', fontSize: 20}}>  Education and career{'\n'}</Text>
+                </View>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingRight: 10}}>
@@ -344,7 +355,10 @@ export default class extends Component {
               </View>
 
               <View style={{paddingTop: 30}}>
-                <Text style={{color: '#0277bd', fontSize: 20}}>Profile verification{'\n'}</Text>
+                <View style={{flexDirection: 'row'}}>
+                  <View style={{width: 10, height: 25, backgroundColor: '#ea0e79'}} />
+                  <Text style={{color: '#0277bd', fontSize: 20}}>  Profile verification{'\n'}</Text>
+                </View>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
                   <View style={{flex:1, flexDirection: 'row'}}>
