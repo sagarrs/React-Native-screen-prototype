@@ -113,16 +113,16 @@ export default class extends Component {
             </View>
             <View style={{flexDirection: 'row'}}>
               <View style={{flexDirection: 'row'}}>
-                <FontAwesome name='birthday-cake' style={{fontSize: 14, color: '#0277bd'}}/>
+                <Image source={require('./Images/bday.png')} style={{width:25, height: 25}}/>
                 <Text style={{color: '#616975', fontSize: 16}}>  25</Text>
               </View>
               <View style={{flexDirection: 'row', paddingLeft:5}}>
-                <FontAwesome name='map-marker' style={{fontSize: 14, color: '#0277bd'}}/>
-                <Text style={{color: '#616975', fontSize: 16}}>  {this.state.data.current_city}, {this.state.data.current_country}</Text>
+                <Image source={require('./Images/location.png')} style={{width:20, height: 20}}/>
+                <Text style={{color: '#616975', fontSize: 16}}>{this.state.data.current_city}, {this.state.data.current_country}</Text>
               </View>
             </View>
             <View style={{flexDirection: 'row'}}>
-              <FontAwesome name='briefcase' style={{fontSize: 14, color: '#0277bd'}}/>
+              <Image source={require('./Images/9.png')} style={{width:20, height: 20}}/>
               <Text style={{color: '#616975', fontSize: 16}}>  {this.state.data.job_title}, {this.state.data.company_name}</Text>
             </View>
           </View>
@@ -268,8 +268,8 @@ export default class extends Component {
               <View style={{paddingTop: 30}}>
                 <Text style={{color: '#0277bd', fontSize: 20}}>About me{'\n'}</Text>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
-                <View style={{paddingTop: 5}}>
-                  <Text style={{fontSize: 14, color: '#616975'}}>{this.state.data.about_myself} {'\n'}</Text>
+                <View style={{paddingTop: 10}}>
+                  <Text style={{fontSize: 14, color: '#616975', lineHeight: 25}}>{this.state.data.about_myself} {'\n'}</Text>
                 </View>
               </View>
 
@@ -279,33 +279,33 @@ export default class extends Component {
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
                       <View>
-                        <FontAwesome name='bell' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/1.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.religion}{"\n"}{this.state.data.caste}</Text>
                       </View>
                       <View style={{paddingTop: 10}}>
-                        <FontAwesome name='male' style={{fontSize: 26, color: '#0277bd'}}/>
-                        <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.smoke}{'\n'}</Text>
+                        <Image source={require('./Images/4.png')} style={{width:40, height: 40}}/>
+                        <Text style={{color: '#616975', fontSize: 12, paddingTop:5, paddingLeft: 15}}>{this.state.data.smoke}{'\n'}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
-                        <FontAwesome name='align-right' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/2.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.height_num}{'\n'}</Text>
                       </View>
                       <View style={{paddingTop: 10}}>
-                        <FontAwesome name='coffee' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/5.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.drink}{"\n"}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
-                        <FontAwesome name='language' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/3.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.mother_tongue}</Text>
                       </View>
                       <View style={{paddingTop: 10}}>
-                        <FontAwesome name='home' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/6.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.food_type}</Text>
                       </View>
                     </View>
@@ -316,27 +316,27 @@ export default class extends Component {
                 <Text style={{color: '#0277bd', fontSize: 20}}>Education and career{'\n'}</Text>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
-                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingRight: 10}}>
                       <View>
-                        <FontAwesome name='graduation-cap' style={{fontSize: 26, color: '#0277bd'}}/>
-                        <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.higher_education}</Text>
+                        <Image source={require('./Images/7.png')} style={{width:40, height: 40}}/>
+                        <Text style={{color: '#616975', fontSize: 12,}}>{this.state.data.higher_education}</Text>
                       </View>
                       <View style={{paddingTop: 10}}>
-                        <FontAwesome name='credit-card' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/10.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.income}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
-                        <FontAwesome name='university' style={{fontSize: 26, color: '#0277bd'}}/>
-                        <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.college_name}{'\n'}</Text>
+                        <Image source={require('./Images/8.png')} style={{width:40, height: 40}}/>
+                        <Text style={{color: '#616975', fontSize: 12, paddingRight: 20}}>{this.state.data.college_name}{'\n'}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
-                        <FontAwesome name='briefcase' style={{fontSize: 26, color: '#0277bd'}}/>
+                        <Image source={require('./Images/9.png')} style={{width:40, height: 40}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.job_title}, {this.state.data.company_name}</Text>
                       </View>
                     </View>
