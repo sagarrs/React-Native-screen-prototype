@@ -23,7 +23,7 @@ const styles = {
   image: {
     backgroundColor: 'transparent',
     height: 250,
-    borderRadius: 10,
+    borderRadius: 30,
   },
 
   loadingView: {
@@ -87,8 +87,9 @@ export default class extends Component {
 
   render () {
     return (
-          <View style={{flex: 1, paddingBottom: 30, paddingLeft: 10, paddingRight: 10}}>
-            <Swiper loadMinimal loadMinimalSize={1} style={{}} loop={false}>
+      <ScrollView>
+          <View style={{flex: 1, paddingBottom: 30, paddingLeft: 10, paddingRight: 10, paddingTop: 30}}>
+            <Swiper loadMinimal loadMinimalSize={1} height={190} showsButtons={true} removeClippedSubviews={false} loop={false}>
               {
                 this.state.imgList.map((item, i) => <Slide
                 loadHandle={this.loadHandle}
@@ -98,9 +99,8 @@ export default class extends Component {
                 key={i} />)
               }
             </Swiper>
-          <ScrollView>
 
-          <View style={{paddingBottom: 20}}>
+          <View style={{paddingBottom: 20, paddingTop: 20}}>
             <View style={{flexDirection: 'row',}}>
               <View>
                 <Text style={{color: '#000000', fontSize: 20, paddingRight: 100}}>{this.state.data.first_name}</Text>
@@ -376,9 +376,8 @@ export default class extends Component {
                   </View>
 
               </View>
-
-          </ScrollView>
         </View>
+      </ScrollView>
     )
   }
 }
