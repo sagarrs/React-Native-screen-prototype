@@ -88,7 +88,7 @@ export default class extends Component {
   render () {
     return (
       <ScrollView>
-          <View style={{flex: 1, paddingBottom: 30, paddingLeft: 10, paddingRight: 10, paddingTop: 30}}>
+          <View style={{flex: 1, paddingBottom: 30, paddingLeft: 20, paddingRight: 20, paddingTop: 30}}>
             <View style={{borderRadius: 10}}>
               <Swiper loadMinimal loadMinimalSize={1} height={190} removeClippedSubviews={false} loop={false}>
                 {
@@ -278,33 +278,33 @@ export default class extends Component {
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
-                      <View style={{paddingLeft: 30}}>
+                      <View>
                         <FontAwesome name='bell' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.religion}{"\n"}{this.state.data.caste}</Text>
                       </View>
-                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                      <View style={{paddingTop: 10}}>
                         <FontAwesome name='male' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.smoke}{'\n'}</Text>
                       </View>
                     </View>
 
-                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
-                      <View style={{paddingLeft: 30}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
+                      <View>
                         <FontAwesome name='align-right' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.height_num}{'\n'}</Text>
                       </View>
-                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                      <View style={{paddingTop: 10}}>
                         <FontAwesome name='coffee' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.drink}{"\n"}</Text>
                       </View>
                     </View>
 
-                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
-                      <View style={{paddingLeft: 30}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
+                      <View>
                         <FontAwesome name='language' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.mother_tongue}</Text>
                       </View>
-                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                      <View style={{paddingTop: 10}}>
                         <FontAwesome name='home' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.food_type}</Text>
                       </View>
@@ -317,25 +317,25 @@ export default class extends Component {
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
-                      <View style={{paddingLeft: 30}}>
+                      <View>
                         <FontAwesome name='graduation-cap' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.higher_education}</Text>
                       </View>
-                      <View style={{paddingLeft: 30, paddingTop: 10}}>
+                      <View style={{paddingTop: 10}}>
                         <FontAwesome name='credit-card' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.income}</Text>
                       </View>
                     </View>
 
-                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
-                      <View style={{paddingLeft: 30}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
+                      <View>
                         <FontAwesome name='university' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.college_name}{'\n'}</Text>
                       </View>
                     </View>
 
-                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10,}}>
-                      <View style={{paddingLeft: 30}}>
+                    <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
+                      <View>
                         <FontAwesome name='briefcase' style={{fontSize: 26, color: '#0277bd'}}/>
                         <Text style={{color: '#616975', fontSize: 12}}>{this.state.data.job_title}, {this.state.data.company_name}</Text>
                       </View>
@@ -348,32 +348,37 @@ export default class extends Component {
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
                   <View style={{flex:1, flexDirection: 'row'}}>
-                    <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
-                      <Text style={{color: '#616975', fontSize: 12}}>Moble   </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                    <View style={{flex:1, flexDirection: 'column'}}>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 12}}>Mobile   </Text>
+                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                      </View>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 12}}>LinkedIn   </Text>
+                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
+                      </View>
                     </View>
-                    <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
-                      <Text style={{color: '#616975', fontSize: 12}}>Work email   </Text>
-                      <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
-                    </View>
-                    <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
-                      <Text style={{color: '#616975', fontSize: 12}}>Personal email   </Text>
-                      <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
-                    </View>
-                  </View>
 
-                  <View style={{flex:1, flexDirection: 'row'}}>
-                    <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
-                      <Text style={{color: '#616975', fontSize: 12}}>LinkedIn </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                    <View style={{flex:1, flexDirection: 'column'}}>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 12}}>Work email   </Text>
+                        <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                      </View>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 12}}>Facebook   </Text>
+                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
+                      </View>
                     </View>
-                    <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
-                      <Text style={{color: '#616975', fontSize: 12}}>Facebook  </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
-                    </View>
-                    <View style={{paddingLeft: 30, paddingTop: 10, flexDirection: 'row'}}>
-                      <Text style={{color: '#616975', fontSize: 12}}>Government ID   </Text>
-                      <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+
+                    <View style={{flex:1, flexDirection: 'column'}}>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 12}}>Personal email   </Text>
+                        <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                      </View>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 12}}>Government ID   </Text>
+                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
+                      </View>
                     </View>
                   </View>
 
