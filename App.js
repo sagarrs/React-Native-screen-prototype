@@ -3,7 +3,7 @@ import {
   Text,
   View,
   Image,
-  Dimensions, ScrollView, Button,
+  Dimensions, ScrollView, Button, TouchableOpacity
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
@@ -41,6 +41,16 @@ const styles = {
     width: 60,
     height: 60
   },
+  ButtonStyle: {
+     backgroundColor:'#0277bd',
+     borderRadius:5,
+     padding:10,
+   },
+
+   TextStyle:{
+       color:'#fff',
+       textAlign:'center',
+   }
 }
 
 const Slide = props => {
@@ -66,7 +76,8 @@ export default class extends Component {
         'https://s3.ap-south-1.amazonaws.com/imagesv1/betterhalf_profiles/e3879294-f375-4ddf-abe9-2c993156322b/1_Guo4Qiz.jpg'
       ],
       loadQueue: [0, 0, 0, 0],
-      data: ''
+      data: '',
+      ButtonText : 'Connect'
     }
     this.loadHandle = this.loadHandle.bind(this)
   }
@@ -103,28 +114,30 @@ export default class extends Component {
               </Swiper>
             </View>
 
-          <View style={{paddingBottom: 20, paddingTop: 20}}>
+          <View style={{paddingBottom: 20}}>
             <View style={{flexDirection: 'row',}}>
               <View>
-                <Text style={{color: '#565C66', fontSize: 20, paddingRight: 100}}>{this.state.data.first_name}</Text>
+                <Text style={{color: '#565C66', fontSize: 20, paddingRight: 100}}>{this.state.data.first_name}{"\n"}</Text>
               </View>
-              <View style={{position: 'absolute', right: 15}}>
-                <Button title="Connect" color="#0277bd" onPress={() => {}}/>
+              <View style={{position: 'absolute', right: 10}}>
+                <TouchableOpacity style={styles.ButtonStyle} activeOpacity = { .5 }>
+                 <Text style={styles.TextStyle}> {this.state.ButtonText} </Text>
+                </TouchableOpacity>
               </View>
             </View>
             <View style={{flexDirection: 'row'}}>
               <View style={{flexDirection: 'row'}}>
-                <Image source={require('./Images/bday.png')} style={{width:25, height: 25}}/>
-                <Text style={{color: '#616975', fontSize: 16}}>  25</Text>
+                <Image source={require('./Images/13.png')} style={{width:20, height: 20}}/>
+                <Text style={{color: '#616975', fontSize: 16}}> 25</Text>
               </View>
               <View style={{flexDirection: 'row', paddingLeft:5}}>
-                <Image source={require('./Images/location.png')} style={{width:20, height: 20}}/>
-                <Text style={{color: '#616975', fontSize: 16}}>{this.state.data.current_city}, {this.state.data.current_country}</Text>
+                <Image source={require('./Images/12.png')} style={{width:15, height: 20}}/>
+                <Text style={{color: '#616975', fontSize: 16}}>{this.state.data.current_city}, {this.state.data.current_country}{"\n"}</Text>
               </View>
             </View>
             <View style={{flexDirection: 'row'}}>
               <Image source={require('./Images/9.png')} style={{width:20, height: 20}}/>
-              <Text style={{color: '#616975', fontSize: 16}}>  {this.state.data.job_title}, {this.state.data.company_name}</Text>
+              <Text style={{color: '#616975', fontSize: 16}}>  {this.state.data.job_title}, {this.state.data.company_name}{"\n"}</Text>
             </View>
           </View>
 
@@ -156,9 +169,10 @@ export default class extends Component {
                   <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
 
                     <View style={{flexDirection: 'column', paddingLeft: 10}}>
+                      <View>
                         <AnimatedCircularProgress
                           size={60}
-                          width={3}
+                          width={2}
                           fill={80}
                           tintColor="#05c4ff"
                           onAnimationComplete={() => console.log('onAnimationComplete')}
@@ -172,10 +186,11 @@ export default class extends Component {
                           }
                         </AnimatedCircularProgress>
                         <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5, color: '#616975'}}>    Values</Text>
-
+                      </View>
+                      <View style={{paddingTop: 20}}>
                         <AnimatedCircularProgress
                           size={60}
-                          width={3}
+                          width={2}
                           fill={80}
                           tintColor="#b5003c"
                           onAnimationComplete={() => console.log('onAnimationComplete')}
@@ -189,81 +204,88 @@ export default class extends Component {
                           }
                         </AnimatedCircularProgress>
                         <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10, color: '#616975'}}>Intellectual</Text>
-                    </View>
-
-                    <View style={{flexDirection: 'row'}}>
-                      <View style={{flexDirection: 'column', paddingLeft: 10}}>
-                        <AnimatedCircularProgress
-                          size={60}
-                          width={3}
-                          fill={80}
-                          tintColor="#fffa05"
-                          onAnimationComplete={() => console.log('onAnimationComplete')}
-                          backgroundColor="#d9d9db">
-                          {
-                            (fill) => (
-                              <Text style={styles.points}>
-                                80
-                              </Text>
-                            )
-                          }
-                        </AnimatedCircularProgress>
-                        <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10, color: '#616975'}}>Relationship</Text>
-
-                        <AnimatedCircularProgress
-                          size={60}
-                          width={3}
-                          fill={80}
-                          tintColor="#cc05ff"
-                          onAnimationComplete={() => console.log('onAnimationComplete')}
-                          backgroundColor="#d9d9db">
-                          {
-                            (fill) => (
-                              <Text style={styles.points}>
-                                80
-                              </Text>
-                            )
-                          }
-                        </AnimatedCircularProgress>
-                        <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10, color: '#616975'}}>Relationship</Text>
                       </View>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                       <View style={{flexDirection: 'column', paddingLeft: 10}}>
-                        <AnimatedCircularProgress
-                          size={60}
-                          width={3}
-                          fill={80}
-                          tintColor="#8dd802"
-                          onAnimationComplete={() => console.log('onAnimationComplete')}
-                          backgroundColor="#d9d9db">
-                          {
-                            (fill) => (
-                              <Text style={styles.points}>
-                                80
-                              </Text>
-                            )
-                          }
-                        </AnimatedCircularProgress>
-                        <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5, color: '#616975'}}>  Emotional</Text>
+                        <View>
+                          <AnimatedCircularProgress
+                            size={60}
+                            width={2}
+                            fill={80}
+                            tintColor="#fffa05"
+                            onAnimationComplete={() => console.log('onAnimationComplete')}
+                            backgroundColor="#d9d9db">
+                            {
+                              (fill) => (
+                                <Text style={styles.points}>
+                                  80
+                                </Text>
+                              )
+                            }
+                          </AnimatedCircularProgress>
+                          <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 10, color: '#616975'}}>Relationship</Text>
+                        </View>
+                        <View style={{paddingTop: 20}}>
+                          <AnimatedCircularProgress
+                            size={60}
+                            width={2}
+                            fill={80}
+                            tintColor="#cc05ff"
+                            onAnimationComplete={() => console.log('onAnimationComplete')}
+                            backgroundColor="#d9d9db">
+                            {
+                              (fill) => (
+                                <Text style={styles.points}>
+                                  80
+                                </Text>
+                              )
+                            }
+                          </AnimatedCircularProgress>
+                          <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5, color: '#616975'}}>Relationship</Text>
+                        </View>
+                      </View>
+                    </View>
 
-                        <AnimatedCircularProgress
-                          size={60}
-                          width={3}
-                          fill={80}
-                          tintColor="#00e0ff"
-                          onAnimationComplete={() => console.log('onAnimationComplete')}
-                          backgroundColor="#d9d9db">
-                          {
-                            (fill) => (
-                              <Text style={styles.points}>
-                                80
-                              </Text>
-                            )
-                          }
-                        </AnimatedCircularProgress>
-                        <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5, color: '#616975'}}>     Social</Text>
+                    <View style={{flexDirection: 'row'}}>
+                      <View style={{flexDirection: 'column', paddingLeft: 10}}>
+                        <View>
+                          <AnimatedCircularProgress
+                            size={60}
+                            width={2}
+                            fill={80}
+                            tintColor="#8dd802"
+                            onAnimationComplete={() => console.log('onAnimationComplete')}
+                            backgroundColor="#d9d9db">
+                            {
+                              (fill) => (
+                                <Text style={styles.points}>
+                                  80
+                                </Text>
+                              )
+                            }
+                          </AnimatedCircularProgress>
+                          <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5, color: '#616975'}}>  Emotional</Text>
+                        </View>
+                        <View style={{paddingTop: 20}}>
+                          <AnimatedCircularProgress
+                            size={60}
+                            width={2}
+                            fill={80}
+                            tintColor="#00e0ff"
+                            onAnimationComplete={() => console.log('onAnimationComplete')}
+                            backgroundColor="#d9d9db">
+                            {
+                              (fill) => (
+                                <Text style={styles.points}>
+                                  80
+                                </Text>
+                              )
+                            }
+                          </AnimatedCircularProgress>
+                          <Text style={{fontSize: 11, paddingTop: 5, paddingBottom: 5, color: '#616975'}}>     Social</Text>
+                        </View>
                       </View>
                     </View>
               </View>
