@@ -22,8 +22,8 @@ const styles = {
   },
   image: {
     backgroundColor: 'transparent',
-    height: 250,
-    borderRadius: 30,
+    height: 300,
+    borderRadius: 10,
   },
 
   loadingView: {
@@ -59,10 +59,11 @@ export default class extends Component {
     super(props)
     this.state = {
       imgList: [
-        'https://gitlab.pro/yuji/demo/uploads/d6133098b53fe1a5f3c5c00cf3c2d670/DVrj5Hz.jpg_1',
-        'https://gitlab.pro/yuji/demo/uploads/2d5122a2504e5cbdf01f4fcf85f2594b/Mwb8VWH.jpg',
-        'https://gitlab.pro/yuji/demo/uploads/4421f77012d43a0b4e7cfbe1144aac7c/XFVzKhq.jpg',
-        'https://gitlab.pro/yuji/demo/uploads/576ef91941b0bda5761dde6914dae9f0/kD3eeHe.jpg'
+        'https://s3.ap-south-1.amazonaws.com/imagesv1/betterhalf_profiles/e3879294-f375-4ddf-abe9-2c993156322b/profile_pic.jpg',
+        'https://s3.ap-south-1.amazonaws.com/imagesv1/betterhalf_profiles/e3879294-f375-4ddf-abe9-2c993156322b/1_Guo4Qiz.jpg',
+        'https://s3.ap-south-1.amazonaws.com/imagesv1/betterhalf_profiles/e3879294-f375-4ddf-abe9-2c993156322b/1_Guo4Qiz.jpg',
+        'https://s3.ap-south-1.amazonaws.com/imagesv1/betterhalf_profiles/e3879294-f375-4ddf-abe9-2c993156322b/1_Guo4Qiz.jpg',
+        'https://s3.ap-south-1.amazonaws.com/imagesv1/betterhalf_profiles/e3879294-f375-4ddf-abe9-2c993156322b/1_Guo4Qiz.jpg'
       ],
       loadQueue: [0, 0, 0, 0],
       data: ''
@@ -90,7 +91,7 @@ export default class extends Component {
       <ScrollView>
           <View style={{flex: 1, paddingBottom: 30, paddingLeft: 20, paddingRight: 20, paddingTop: 30}}>
             <View style={{borderRadius: 10}}>
-              <Swiper loadMinimal loadMinimalSize={1} height={190} removeClippedSubviews={false} loop={false}>
+              <Swiper loadMinimal loadMinimalSize={1} height={350} removeClippedSubviews={false} loop={false} dotColor="#ffffff" activeDotColor="#ea0e79">
                 {
                   this.state.imgList.map((item, i) => <Slide
                   loadHandle={this.loadHandle}
