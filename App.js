@@ -368,13 +368,13 @@ export default class extends Component {
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
                         <Image source={require('./Images/8.png')} style={{width:24, height: 24}}/>
-                        <Text style={{color: '#616975', fontSize: 13,}}>{this.state.data.college_name}{'\n'}</Text>
+                        <Text style={{color: '#616975', fontSize: 13, paddingRight: 10}}>{this.state.data.college_name}{'\n'}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
-                        <Image source={require('./Images/9.png')} style={{width:24, height: 24}}/>
+                        <Image source={require('./Images/9.png')} style={{width:24, height: 24, left: 5}}/>
                         <Text style={{color: '#616975', fontSize: 13,}}>{this.state.data.job_title}, {this.state.data.company_name}</Text>
                       </View>
                     </View>
