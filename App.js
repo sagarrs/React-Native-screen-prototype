@@ -3,7 +3,7 @@ import {
   Text,
   View,
   Image,
-  Dimensions, ScrollView, Button, TouchableOpacity
+  Dimensions, ScrollView, Button, TouchableOpacity, TextInput
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
@@ -77,7 +77,7 @@ export default class extends Component {
       ],
       loadQueue: [0, 0, 0, 0],
       data: '',
-      ButtonText : 'Connect'
+      ButtonText : 'Connect',
     }
     this.loadHandle = this.loadHandle.bind(this)
   }
@@ -128,16 +128,16 @@ export default class extends Component {
               </View>
               <View style={{flexDirection: 'row', paddingTop: 5}}>
                 <View style={{flexDirection: 'row'}}>
-                  <Image source={require('./Images/03.png')} style={{width:20, height: 20}}/>
+                  <Image source={require('./Images/03.png')} style={{width:15, height: 15}}/>
                   <Text style={{color: '#616975', fontSize: 13}}> 25</Text>
                 </View>
                 <View style={{flexDirection: 'row', paddingLeft:5}}>
-                  <Image source={require('./Images/02.png')} style={{width:20, height: 20}}/>
+                  <Image source={require('./Images/02.png')} style={{width:14, height: 14}}/>
                   <Text style={{color: '#616975', fontSize: 13}}> {this.state.data.current_city}, {this.state.data.current_country}{"\n"}</Text>
                 </View>
               </View>
               <View style={{flexDirection: 'row', paddingTop: 2}}>
-                <Image source={require('./Images/01.png')} style={{width:20, height: 20}}/>
+                <Image source={require('./Images/01.png')} style={{width:14, height: 14}}/>
                 <Text style={{color: '#616975', fontSize: 13}}>  {this.state.data.job_title}, {this.state.data.company_name}{"\n"}</Text>
               </View>
           </View>
@@ -300,7 +300,8 @@ export default class extends Component {
                 </View>
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                 <View style={{paddingTop: 10}}>
-                  <Text style={{fontSize: 14, color: '#616975', lineHeight: 25}}>{this.state.data.about_myself} {'\n'}</Text>
+
+                  <TextInput value={this.state.data.about_myself} multiline={true} numberOfLines = {4} underlineColorAndroid='rgba(0,0,0,0)' style={{borderBottomColor: '#000000', borderBottomWidth: 1}} />
                 </View>
           </View>
 
