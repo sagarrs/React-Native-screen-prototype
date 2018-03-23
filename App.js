@@ -368,13 +368,13 @@ export default class extends Component {
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
                         <Image source={require('./Images/8.png')} style={{width:24, height: 24}}/>
-                        <Text style={{color: '#616975', fontSize: 13,}}>{this.state.data.college_name}{'\n'}</Text>
+                        <Text style={{color: '#616975', fontSize: 13, paddingRight: 10}}>{this.state.data.college_name}{'\n'}</Text>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column', paddingTop: 10, paddingLeft: 30}}>
                       <View>
-                        <Image source={require('./Images/9.png')} style={{width:24, height: 24}}/>
+                        <Image source={require('./Images/9.png')} style={{width:24, height: 24, left: 5}}/>
                         <Text style={{color: '#616975', fontSize: 13,}}>{this.state.data.job_title}, {this.state.data.company_name}</Text>
                       </View>
                     </View>
@@ -391,34 +391,34 @@ export default class extends Component {
                   <View style={{flex:1, flexDirection: 'row'}}>
                     <View style={{flex:1, flexDirection: 'column'}}>
                       <View style={{paddingTop: 10, flexDirection: 'row'}}>
-                        <Text style={{color: '#616975', fontSize: 12}}>Mobile   </Text>
-                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                        <Text style={{color: '#616975', fontSize: 13}}>Mobile</Text>
+                        <Image source={require('./Images/71.png')} style={{width:14, height: 14, left: 20}}/>
                       </View>
                       <View style={{paddingTop: 10, flexDirection: 'row'}}>
-                        <Text style={{color: '#616975', fontSize: 12}}>LinkedIn   </Text>
-                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
-                      </View>
-                    </View>
-
-                    <View style={{flex:1, flexDirection: 'column'}}>
-                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
-                        <Text style={{color: '#616975', fontSize: 12}}>Work email   </Text>
-                        <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#0277bd'}}/>
-                      </View>
-                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
-                        <Text style={{color: '#616975', fontSize: 12}}>Facebook   </Text>
-                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
+                        <Text style={{color: '#616975', fontSize: 13}}>LinkedIn</Text>
+                        <Image source={require('./Images/71.png')} style={{width:14, height: 14, left: 10}}/>
                       </View>
                     </View>
 
                     <View style={{flex:1, flexDirection: 'column'}}>
                       <View style={{paddingTop: 10, flexDirection: 'row'}}>
-                        <Text style={{color: '#616975', fontSize: 12}}>Personal email   </Text>
-                        <FontAwesome name='exclamation-circle' style={{fontSize: 16, color: '#0277bd'}}/>
+                        <Text style={{color: '#616975', fontSize: 13}}>Work email</Text>
+                        <Image source={require('./Images/61.png')} style={{width:14, height: 14, left: 5}}/>
                       </View>
                       <View style={{paddingTop: 10, flexDirection: 'row'}}>
-                        <Text style={{color: '#616975', fontSize: 12}}>Government ID   </Text>
-                        <FontAwesome name='check-circle' style={{fontSize: 16, color: '#fcfc05'}}/>
+                        <Text style={{color: '#616975', fontSize: 13}}>Facebook </Text>
+                        <Image source={require('./Images/71.png')} style={{width:14, height: 14, left: 10}}/>
+                      </View>
+                    </View>
+
+                    <View style={{flex:1, flexDirection: 'column'}}>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 13}}>Personal email</Text>
+                        <Image source={require('./Images/61.png')} style={{width:14, height: 14, left: 5}}/>
+                      </View>
+                      <View style={{paddingTop: 10, flexDirection: 'row'}}>
+                        <Text style={{color: '#616975', fontSize: 13}}>Government ID</Text>
+                        <Image source={require('./Images/71.png')} style={{width:14, height: 14, left: 5}}/>
                       </View>
                     </View>
                   </View>
