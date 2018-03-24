@@ -8,6 +8,7 @@ import {
 import Swiper from 'react-native-swiper';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { TextField } from 'react-native-material-textfield';
 const { width } = Dimensions.get('window')
 const loading = require('./Images/loading.gif')
 
@@ -78,6 +79,7 @@ export default class extends Component {
       loadQueue: [0, 0, 0, 0],
       data: '',
       ButtonText : 'Connect',
+      phone: 'I am a dedicated person in a family of four, i enjoy reading, meeting new people and finding ways to help them have a uplifting experience. I am a sapiosexual person.',
     }
     this.loadHandle = this.loadHandle.bind(this)
   }
@@ -98,6 +100,7 @@ export default class extends Component {
     }
 
   render () {
+    let { phone } = this.state;
     return (
       <ScrollView>
         <View style={{flex: 1, paddingBottom: 30, paddingLeft: 20, paddingRight: 20, paddingTop: 30}}>
@@ -301,7 +304,13 @@ export default class extends Component {
                 <View style = {{borderWidth: 0.3, borderColor:'#b0aeae',}} />
                 <View style={{paddingTop: 10}}>
 
-                  <TextInput value={this.state.data.about_myself} multiline={true} numberOfLines = {4} underlineColorAndroid='rgba(0,0,0,0)' style={{borderBottomColor: '#000000', borderBottomWidth: 1}} />
+                <TextField inputContainerPadding={2}
+                  style = {{ marginBottom: -12 }}
+                  label='About me'
+                  value={phone}
+                   multiline={true}
+                  onChangeText={ (phone) => this.setState({ phone }) }
+                />
                 </View>
           </View>
 
